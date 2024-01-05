@@ -14,8 +14,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    sh "docker-compose down --rmi all"
-                    sh "docker-compose up -d --build"
+                    sh "sudo docker-compose down --rmi all"
+                    sh "sudo docker-compose up -d --build"
                 }
             }
         }
